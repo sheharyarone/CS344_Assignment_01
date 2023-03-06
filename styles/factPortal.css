@@ -1,0 +1,26 @@
+body {
+  background: #ffc736;
+}
+.animal-picture {
+  margin-top: 5%;
+  margin-left: 8%;
+  width: 35%;
+  height: 20%;
+}
+.volume-button {
+  margin-top: 12%;
+  position: absolute;
+
+  margin-left: 25%;
+  width: 22%;
+  height: 22%;
+}
+.button-container {
+  margin: 100px;
+}
+#prev-button {
+  float: left;
+}
+#next-button {
+  float: right;
+}

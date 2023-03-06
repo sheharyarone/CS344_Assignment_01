@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/factPortal.css" />
+
+    <title>Animal Sounds</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        id="animal-picture"
+        src=""
+        alt="animal-picture"
+        class="animal-picture"
+      />
+      <img
+        src="../src/img/volume-on.png"
+        class="volume-button"
+        alt="volume-button"
+        onclick="playSound()"
+      />
+      <audio id="animal-sound" src="" type="audio/mpeg"></audio>
+      <div class="button-container">
+        <img
+          src="../src/img/prev-button.png"
+          alt=""
+          id="prev-button"
+          onclick="prevAnimal()"
+        />
+        <img
+          src="../src/img/next-button.png"
+          alt=""
+          id="next-button"
+          onclick="nextAnimal()"
+        />
+      </div>
+    </div>
+  </body>
+  <script src="factPortal.js"></script>
+</html>
