@@ -1,0 +1,16 @@
+body {
+  background: #d88c8c;
+}
+.container {
+  border-style: solid;
+  border-color: rgb(29, 30, 29);
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  left: 25%;
+  width: 50%;
+}
+.animal-picture {
+  width: 20%;
+  height: 20%;
+}

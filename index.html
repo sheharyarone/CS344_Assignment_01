@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Animal Sounds</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        id="animal-picture"
+        src=""
+        class="animal-picture"
+        onclick="playSound()"
+      />
+      <audio id="animal-sound" src="" type="audio/mpeg"></audio>
+      <div class="button-container">
+        <button id="prev-button" onclick="prevAnimal()">Prev</button>
+        <button id="next-button" onclick="nextAnimal()">Next</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
