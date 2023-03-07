@@ -2,7 +2,7 @@ const animals = [
   {
     id: 1,
     name: "cat",
-    image: "../src/img/cat/png",
+    image: "../src/img/cat.png",
     audio: "../src/audio/cat.mp3",
   },
   {
@@ -43,7 +43,7 @@ const animals = [
   },
 ];
 
-let currentAnimalIndex = 1;
+let currentAnimalIndex = 0;
 const animalPicture = document.getElementById("animal-picture");
 const animalSound = document.getElementById("animal-sound");
 

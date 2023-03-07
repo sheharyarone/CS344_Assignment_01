@@ -2,18 +2,19 @@ body {
   background: #ffc736;
 }
 .animal-picture {
+  /* border: solid 2px black; */
   margin-top: 5%;
   margin-left: 8%;
-  width: 35%;
-  height: 20%;
+}
+.container img {
+  width: 300px;
+  height: 250px;
 }
 .volume-button {
-  margin-top: 12%;
+  /* border: solid 2px black; */
+  margin-top: 10%;
   position: absolute;
-
   margin-left: 25%;
-  width: 22%;
-  height: 22%;
 }
 .button-container {
   margin: 100px;
@@ -23,4 +24,22 @@ body {
 }
 #next-button {
   float: right;
+}
+@media screen and (max-width: 900px) {
+  .volume-button {
+    display: block;
+  }
+  .container img {
+    margin-left: 34%;
+    width: 200px;
+    height: 200px;
+  }
+  .button-container {
+    margin-top: 300px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .container img {
+    margin-left: 25%;
+  }
 }
