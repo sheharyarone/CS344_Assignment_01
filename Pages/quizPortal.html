@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animal Quiz</title>
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+      img.selected {
+        border: 5px solid green;
+      }
+      .correct {
+        color: green;
+      }
+      .wrong {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-container">
+      <h1>Animal Quiz</h1>
+      <div id="score-container">Score: <span id="score">0</span></div>
+      <div id="question-container">
+        <img id="image1" src="" alt="animal image" />
+        <img id="image2" src="" alt="animal image" />
+        <button id="play-button">Play Sound</button>
+        <audio id="audio" src=""></audio>
+      </div>
+      <div id="answer-container">
+        <p id="answer"></p>
+      </div>
+      <button id="submit-button">Submit Answer</button>
+    </div>
+  </body>
+  <script src="quizPortal.js"></script>
+</html>
