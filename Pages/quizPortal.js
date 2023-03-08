@@ -78,11 +78,13 @@ submitButton.addEventListener("click", () => {
     answerDisplay.textContent = "Correct!";
     answerDisplay.classList.remove("wrong");
     answerDisplay.classList.add("correct");
+    selectedImage.style.border = "5px solid green";
     score++;
   } else {
     answerDisplay.textContent = "Wrong!";
     answerDisplay.classList.remove("correct");
     answerDisplay.classList.add("wrong");
+    selectedImage.style.border = "5px solid red";
   }
 
   // Disable the buttons
@@ -92,6 +94,7 @@ submitButton.addEventListener("click", () => {
 
   // Increment current question index and display the next question or end the quiz
   currentQuestionIndex++;
+
   if (currentQuestionIndex < 5) {
     setTimeout(displayQuestion, 1000);
   } else {
@@ -136,6 +139,8 @@ function displayQuestion() {
     image2.alt = shuffledAnimals[randomSecondImg].name;
     audio.src = currentAnimal.audio;
   }
+  image1.style.border = "";
+  image2.style.border = "";
   answerDisplay.textContent = "";
   submitButton.disabled = true;
   playButton.disabled = false;
@@ -144,7 +149,7 @@ function displayQuestion() {
 
 // Display the final score
 function displayResults() {
-  document.querySelector("#game-container").innerHTML = `
+  document.querySelector("#quiz-container").innerHTML = `
     <h1>Congratulations!</h1>
     <p>You scored ${score} out of 5.</p>
     <button onclick="window.location.reload()">Play Again</button>
