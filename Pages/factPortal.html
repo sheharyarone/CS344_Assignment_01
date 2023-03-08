@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/factPortal.css" />
-    <script src="factPortal.js"></script>
-
     <title>Animal Sounds</title>
   </head>
   <body>
     <div class="container">
-      <img
-        id="animal-picture"
-        src=""
-        alt="animal-picture"
-        class="animal-picture"
-      />
+      <div class="image-container">
+        <img
+          id="animal-picture"
+          src=""
+          alt="animal-picture"
+          class="animal-picture"
+        />
+        <p id="animal-name"></p>
+      </div>
       <img
         src="../src/img/volume-on.png"
         class="volume-button"
@@ -31,15 +32,18 @@
           src="../src/img/prev-button.png"
           alt=""
           id="prev-button"
+          class="navigation-buttons"  
           onclick="prevAnimal()"
         />
         <img
           src="../src/img/next-button.png"
           alt=""
           id="next-button"
+          class="navigation-buttons"
           onclick="nextAnimal()"
         />
       </div>
     </div>
   </body>
+  <script src="factPortal.js"></script>
 </html>

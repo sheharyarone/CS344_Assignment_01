@@ -7,8 +7,19 @@ body {
   margin-left: 8%;
 }
 .container img {
-  width: 300px;
+  width: 250px;
   height: 250px;
+}
+.image-container {
+  margin-top: 10%;
+  margin-left: 20%;
+  display: inline-block;
+}
+.image-container p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  margin-left: 45%;
 }
 .volume-button {
   /* border: solid 2px black; */
@@ -17,7 +28,9 @@ body {
   margin-left: 25%;
 }
 .button-container {
-  margin: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 20px;
 }
 #prev-button {
   float: left;
@@ -25,21 +38,31 @@ body {
 #next-button {
   float: right;
 }
-@media screen and (max-width: 900px) {
+.navigation-buttons {
+  width: 120px;
+}
+@media screen and (max-width: 1040px) {
   .volume-button {
     display: block;
   }
   .container img {
     margin-left: 34%;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   .button-container {
     margin-top: 300px;
   }
+  .navigation-buttons {
+    width: 80px;
+  }
 }
 @media screen and (max-width: 570px) {
   .container img {
-    margin-left: 25%;
+    margin-left: 30%;
+  }
+  .container img {
+    width: 150px;
+    height: 150px;
   }
 }

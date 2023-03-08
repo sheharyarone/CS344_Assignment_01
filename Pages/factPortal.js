@@ -46,11 +46,14 @@ const animals = [
 let currentAnimalIndex = 0;
 const animalPicture = document.getElementById("animal-picture");
 const animalSound = document.getElementById("animal-sound");
+const animalName = document.getElementById("animal-name");
+
 
 function showCurrentAnimal() {
   const currentAnimal = animals[currentAnimalIndex];
   animalPicture.src = currentAnimal.image;
   animalSound.src = currentAnimal.audio;
+  animalName.textContent=currentAnimal.name
 }
 
 function playSound() {
