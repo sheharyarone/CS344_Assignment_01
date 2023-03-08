@@ -120,12 +120,22 @@ playButton.addEventListener("click", () => {
 // Display the current question
 function displayQuestion() {
   const currentAnimal = shuffledAnimals[currentQuestionIndex];
-  image1.src = currentAnimal.image;
-  image1.alt = currentAnimal.name;
-  var randomSecondImg = (currentQuestionIndex + 1) % 7;
-  image2.src = shuffledAnimals[randomSecondImg].image; // Select a random image for the second option
-  image2.alt = shuffledAnimals[randomSecondImg].name;
-  audio.src = currentAnimal.audio;
+  const randomSelection = Math.floor(Math.random() * 2);
+  if (randomSelection == 0) {
+    image2.src = currentAnimal.image;
+    image2.alt = currentAnimal.name;
+    var randomSecondImg = (currentQuestionIndex + 1) % 7;
+    image1.src = shuffledAnimals[randomSecondImg].image; // Select a random image for the second option
+    image1.alt = shuffledAnimals[randomSecondImg].name;
+    audio.src = currentAnimal.audio;
+  } else {
+    image1.src = currentAnimal.image;
+    image1.alt = currentAnimal.name;
+    var randomSecondImg = (currentQuestionIndex + 1) % 7;
+    image2.src = shuffledAnimals[randomSecondImg].image; // Select a random image for the second option
+    image2.alt = shuffledAnimals[randomSecondImg].name;
+    audio.src = currentAnimal.audio;
+  }
   answerDisplay.textContent = "";
   submitButton.disabled = true;
   playButton.disabled = false;
