@@ -5,20 +5,32 @@
     <link rel="stylesheet" href="../styles/quizPortal.css" />
   </head>
   <body>
-    <div id="quiz-container">
+    <div id="quiz-container" class="quiz-container">
       <h1>Animal Quiz</h1>
       <div id="score-container">Score: <span id="score">0</span></div>
       <div id="question-container">
-        <img id="image1" src="" alt="animal image" />
-        <img id="image2" src="" alt="animal image" />
-        <button id="play-button">Play Sound</button>
+        <div class="image-container">
+          <img id="image1" src="" alt="animal image" />
+          <p id="animal1"></p>
+        </div>
+        <div class="volume-container">
+          <img
+            src="../src/img/volume-on.png"
+            onclick="playSound()"
+            id="volume-on"
+          />
+        </div>
+        <div class="image-container">
+          <img id="image2" src="" alt="animal image" />
+          <p id="animal2"></p>
+        </div>
         <audio id="audio" src=""></audio>
       </div>
       <div id="answer-container">
         <p id="answer"></p>
       </div>
-      <button id="submit-button">Submit Answer</button>
     </div>
+    <img src="../src/img/next-button.png" id="submit-button" />
   </body>
   <script src="quizPortal.js"></script>
 </html>

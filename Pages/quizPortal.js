@@ -49,7 +49,8 @@ const image2 = document.querySelector("#image2");
 const audio = document.querySelector("#audio");
 const answerDisplay = document.querySelector("#answer");
 const submitButton = document.querySelector("#submit-button");
-const playButton = document.querySelector("#play-button");
+const animal1Name = document.getElementById("animal1");
+const animal2Name = document.getElementById("animal2");
 
 // Shuffle the animal array
 const shuffledAnimals = animals.sort(() => 0.5 - Math.random());
@@ -64,10 +65,6 @@ displayQuestion();
 // Handle submit button click
 submitButton.addEventListener("click", () => {
   const selectedImage = document.querySelector(".selected");
-  if (!selectedImage) {
-    answerDisplay.textContent = "Please select an answer.";
-    return;
-  }
 
   const correctAnimal = shuffledAnimals[currentQuestionIndex];
   const selectedAnimal = shuffledAnimals.find(
@@ -76,21 +73,15 @@ submitButton.addEventListener("click", () => {
 
   if (correctAnimal === selectedAnimal) {
     answerDisplay.textContent = "Correct!";
-    answerDisplay.classList.remove("wrong");
-    answerDisplay.classList.add("correct");
-    selectedImage.style.border = "5px solid green";
+    selectedImage.className = "correct-choice";
     score++;
   } else {
     answerDisplay.textContent = "Wrong!";
-    answerDisplay.classList.remove("correct");
-    answerDisplay.classList.add("wrong");
-    selectedImage.style.border = "5px solid red";
+    selectedImage.className = "wrong-choice";
   }
 
   // Disable the buttons
-  selectedImage.classList.remove("selected");
   submitButton.disabled = true;
-  playButton.disabled = true;
 
   // Increment current question index and display the next question or end the quiz
   currentQuestionIndex++;
@@ -115,10 +106,11 @@ image2.addEventListener("click", () => {
   submitButton.disabled = false;
 });
 
-// Handle play button click
-playButton.addEventListener("click", () => {
+// Handle play button click on volume-on img
+function playSound() {
+  audio.currentTime = 0;
   audio.play();
-});
+}
 
 // Display the current question
 function displayQuestion() {
@@ -127,23 +119,26 @@ function displayQuestion() {
   if (randomSelection == 0) {
     image2.src = currentAnimal.image;
     image2.alt = currentAnimal.name;
+    animal2Name.textContent = currentAnimal.name;
     var randomSecondImg = (currentQuestionIndex + 1) % 7;
     image1.src = shuffledAnimals[randomSecondImg].image; // Select a random image for the second option
     image1.alt = shuffledAnimals[randomSecondImg].name;
+    animal1Name.textContent = shuffledAnimals[randomSecondImg].name;
     audio.src = currentAnimal.audio;
   } else {
     image1.src = currentAnimal.image;
     image1.alt = currentAnimal.name;
+    animal1Name.textContent = currentAnimal.name;
     var randomSecondImg = (currentQuestionIndex + 1) % 7;
     image2.src = shuffledAnimals[randomSecondImg].image; // Select a random image for the second option
     image2.alt = shuffledAnimals[randomSecondImg].name;
+    animal2Name.textContent = shuffledAnimals[randomSecondImg].name;
     audio.src = currentAnimal.audio;
   }
-  image1.style.border = "";
-  image2.style.border = "";
+  image1.className = "";
+  image2.className = "";
   answerDisplay.textContent = "";
   submitButton.disabled = true;
-  playButton.disabled = false;
   scoreDisplay.textContent = `${score}`;
 }
 
