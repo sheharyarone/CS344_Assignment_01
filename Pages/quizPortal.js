@@ -144,9 +144,12 @@ function displayQuestion() {
 
 // Display the final score
 function displayResults() {
-  document.querySelector("#quiz-container").innerHTML = `
-    <h1>Congratulations!</h1>
-    <p>You scored ${score} out of 5.</p>
-    <button onclick="window.location.reload()">Play Again</button>
+  document.querySelector("#html").innerHTML = `
+    <div style="text-align: center;">
+      <h1 style="font-size: 3em; margin-bottom: 1em;">Congratulations!</h1>
+      <p style="font-size: 2em; margin-bottom: 1em;">You scored ${score} out of 5.</p>
+      <button style="font-size: 1.5em; padding: 1em 2em; border-radius: 10px; background-color: #ff9933; color: #fff; border: none; cursor: pointer; margin-right: 1em;" onclick="window.location.reload()">Play Again</button>
+      <button style="font-size: 1.5em; padding: 1em 2em; border-radius: 10px; background-color: #ff9933; color: #fff; border: none; cursor: pointer;" onclick="window.location.href='../index.html'">Go Back to Homepage</button>
+    </div>
   `;
 }

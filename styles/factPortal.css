@@ -1,6 +1,11 @@
 body {
   background: #ffc736;
 }
+.heading {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 400%;
+}
 .animal-picture {
   /* border: solid 2px black; */
   margin-top: 5%;
@@ -11,7 +16,7 @@ body {
   height: 250px;
 }
 .image-container {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 20%;
   display: inline-block;
 }
