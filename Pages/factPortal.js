@@ -48,21 +48,23 @@ const animalPicture = document.getElementById("animal-picture");
 const animalSound = document.getElementById("animal-sound");
 const animalName = document.getElementById("animal-name");
 
-
 function showCurrentAnimal() {
   const currentAnimal = animals[currentAnimalIndex];
   animalPicture.src = currentAnimal.image;
   animalSound.src = currentAnimal.audio;
-  animalName.textContent=currentAnimal.name
+  animalName.textContent = currentAnimal.name;
 }
 
 function playSound() {
   animalSound.currentTime = 0;
   animalSound.play();
 }
-
 function nextAnimal() {
-  currentAnimalIndex = (currentAnimalIndex + 1) % animals.length;
+  if (currentAnimalIndex === animals.length - 1) {
+    window.location.replace("quizPortal.html");
+    return;
+  }
+  currentAnimalIndex++;
   showCurrentAnimal();
 }
 
