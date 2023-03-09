@@ -12,7 +12,8 @@ body {
   font-size: 250%;
 }
 .quiz-container img {
-  margin: 5%;
+  margin-top: 2%;
+  margin-left: 5%;
   width: 300px;
   height: 300px;
 }
@@ -32,6 +33,7 @@ img.selected {
 #volume-on {
   width: 150px;
   height: auto;
+  animation: resize 2s infinite;
 }
 .image-container,
 .volume-container {
@@ -48,6 +50,17 @@ img.selected {
 #submit-button {
   margin-right: 20%;
   float: right;
+}
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @media (max-width: 1085px) {
   .quiz-container img {

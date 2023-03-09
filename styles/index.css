@@ -1,5 +1,6 @@
 body {
   background: #ffc736;
+  overflow-x: hidden;
 }
 .container {
   float: left;
@@ -22,14 +23,31 @@ body {
 .start-button {
   width: 45%;
   height: 25%;
+  animation: resize 2s infinite;
 }
 .homepage-pic {
   float: right;
   margin-top: 1%;
   width: 45%;
   height: 40%;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+.homepage-pic:hover {
+  animation: resize 2s infinite;
 }
 
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media screen and (max-width: 1045px) {
   .container {
     float: none;

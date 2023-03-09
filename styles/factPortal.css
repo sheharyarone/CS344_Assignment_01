@@ -22,10 +22,21 @@ body {
   margin-left: 45%;
 }
 .volume-button {
-  /* border: solid 2px black; */
   margin-top: 10%;
   position: absolute;
   margin-left: 25%;
+  animation: resize 2s infinite;
+}
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .button-container {
   margin-right: 100px;

@@ -61,7 +61,7 @@ function playSound() {
 }
 function nextAnimal() {
   if (currentAnimalIndex === animals.length - 1) {
-    window.location.replace("quizPortal.html");
+    window.location.replace("quizStartingPage.html");
     return;
   }
   currentAnimalIndex++;
