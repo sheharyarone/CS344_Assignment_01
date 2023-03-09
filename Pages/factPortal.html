@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/factPortal.css" />
+    <!-- link to external stylesheet -->
     <title>ANIMAL SOUNDS</title>
   </head>
   <body>
     <div class="container">
       <h1 class="heading">Listen To These Sounds</h1>
+      <!-- main heading for the page -->
       <div class="image-container">
         <img
           id="animal-picture"
@@ -18,14 +20,27 @@
           class="animal-picture"
         />
         <p id="animal-name"></p>
+        <!-- empty paragraph element to hold the animal name -->
       </div>
       <img
         src="../src/img/volume-on.png"
         class="volume-button"
         alt="volume-button"
         onclick="playSound()"
+        <!--
+        button
+        to
+        play
+        the
+        animal
+        sound
+        when
+        clicked
+        --
+      />
       />
       <audio id="animal-sound" src="" type="audio/mpeg"></audio>
+      <!-- empty audio element to hold the animal sound -->
     </div>
     <div>
       <div class="button-container">
@@ -36,15 +51,17 @@
           class="navigation-buttons"
           onclick="prevAnimal()"
         />
+        <!-- button to go to the previous animal -->
         <img
           src="../src/img/next-button.png"
           alt=""
           id="next-button"
           class="navigation-buttons"
           onclick="nextAnimal()"
-        />
+        /><!-- button to go to the next animal -->
       </div>
     </div>
   </body>
   <script src="factPortal.js"></script>
+  <!-- link to the external JavaScript file -->
 </html>
